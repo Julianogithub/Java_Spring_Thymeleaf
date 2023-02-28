@@ -14,7 +14,7 @@
 	                        </li>
 	                    </ul>
 	                </div>
-	                <a class="btn btn-primary btn-md" href="@{/funcionarios/listar}" role="button">
+	                <a class="btn btn-primary btn-md" href="listar" role="button">
 	                    <span class="oi oi-spreadsheet" title="Cadastro" aria-hidden="true"></span>
 	                    <span>Listar Funcionários</span>
 	                </a>
@@ -25,7 +25,8 @@
 	        
 	        	<div th:replace="fragments/alert"></div>
 	        
-	            <form th:action="@{/funcionarios/salvar}" th:object="${funcionario}" method="POST">
+	            <form th:action="${funcionario.id == null} ? @{/funcionarios/salvar} : @{/funcionarios/editar}" 
+	                  th:object="${funcionario}" method="POST">
 	                <div class="form-row">
 	                    <div class="form-group col-md-6">
 	                        <label for="nome">Nome do Funcionário</label>
@@ -116,7 +117,7 @@
 	                    </div>
 	                    <div class="form-group col-md-4">
 	                        <label for="uf">UF</label>
-	                        <select id="uf" class="form-control" name="endereco.uf">
+	                        <select id="uf" class="form-control" th:field="*{endereco.uf}">
 	                            <option value="">Selecione...</option>
 	                            <option th:each="uf : ${ufs}" th:value="${uf}" th:text="${uf.sigla}"></option>
 	                        </select>
@@ -133,7 +134,8 @@
 	                        </div>
 	                    </div>
 	                </div>
-	                <input type="hidden" id="id" name="id" value=""/>
+	                <input type="hidden" id="id" th:field="*{id}"/>
+					<input type="hidden" id="endereco.id" th:field="*{endereco.id}"/>
 	                <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
 	            </form>
 	        </div>
