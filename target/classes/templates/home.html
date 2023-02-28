@@ -1,75 +1,185 @@
 <!DOCTYPE html>
 <html layout:decorate="~{layout}">
-<head><meta charset="UTF-8" /></head>
+<head>
+<meta charset="UTF-8" />
+</head>
 <body>
-		
-	<section class="layout-content" layout:fragment="corpo">	
+
+	<section class="layout-content" layout:fragment="corpo">
 		<nav class="navbar navbar-expand-md bg-light">
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<i class="oi oi-caret-right"></i>
-						<span>Home</span>
-					</li>
+					<li class="nav-item active"><i class="oi oi-caret-right"></i>
+						<span>Home</span></li>
 				</ul>
 			</div>
 		</nav>
-		
+
 		<div class="container">
 			<div id="list-home" class="row">
 				<div class="col-4">
 					<div class="list-group" id="list-tab" role="tablist">
-					
-						<a class="list-group-item list-group-item-action  active"
+									
+						<a
+							class="list-group-item list-group-item-action active"
+							id="list-perfil-list" data-toggle="list" href="#perfil"
+							role="tab" aria-controls="perfil">Meu Perfil</a> 
+						<a
+							class="list-group-item list-group-item-action"
+							id="list-faculdade-list" data-toggle="list" href="#faculdade"
+							role="tab" aria-controls="faculdade">Faculdade</a>
+						<a 
+							class="list-group-item list-group-item-action"
 							id="list-eclipse-list" data-toggle="list" href="#eclipse"
-							role="tab" aria-controls="eclipse">Eclipse IDE</a>
-						
-						<a class="list-group-item list-group-item-action"
+							role="tab" aria-controls="eclipse">Java IDEs</a> 
+						<a
+							class="list-group-item list-group-item-action"
 							id="list-spring-boot-list" data-toggle="list" href="#spring-boot"
-							role="tab" aria-controls="spring-boot">Spring-Boot</a> 
-							
-						<a class="list-group-item list-group-item-action" id="list-sts-list"
-							data-toggle="list" href="#sts" role="tab" aria-controls="sts">Spring
-							Tool Suite</a> 
-							
-						<a class="list-group-item list-group-item-action"
-							id="list-thymeleaf-list" data-toggle="list" href="#thymeleaf"
-							role="tab" aria-controls="thymeleaf">Thymeleaf</a>
-							 
-						<a class="list-group-item list-group-item-action"
-							id="list-webjars-list" data-toggle="list" href="#webjars"
-							role="tab" aria-controls="webjars">WebJars</a> 
-							
-						<a class="list-group-item list-group-item-action"
-							id="list-hibernate-list" data-toggle="list" href="#hibernate"
-							role="tab" aria-controls="hibernate">Hibernate</a> 
-							
-						<a class="list-group-item list-group-item-action"
-							id="list-bootstrap-list" data-toggle="list" href="#bootstrap"
-							role="tab" aria-controls="bootstrap">Bootstrap 4</a>
-							
-						<a class="list-group-item list-group-item-action"
-							id="list-diffchecker-list" data-toggle="list" href="#diffchecker"
-							role="tab" aria-controls="bootstrap">Diffchecker</a>
-												
+							role="tab" aria-controls="spring-boot">Spring-Boot Tool Suite</a>
+						<a 
+							class="list-group-item list-group-item-action"
+							id="list-mysql-list" data-toggle="list" href="#mysql" role="tab"
+							aria-controls="mysql">MySQL</a> 
+						<a
+							class="list-group-item list-group-item-action"
+							id="list-web-list" data-toggle="list" href="#web"
+							role="tab" aria-controls="web">WEB MVC</a>
+						<a
+							class="list-group-item list-group-item-action"
+							id="list-github-list" data-toggle="list" href="#github"
+							role="tab" aria-controls="github">GitHub</a> 
+						
 					</div>
-				</div>				
+				</div>
+
 				<div class="col-8">
-					<div class="tab-content" id="nav-tabContent">						
-						<div class="tab-pane fade show active" id="eclipse" role="tabpanel"
-							aria-labelledby="list-eclipse-list">
-							<a href="https://www.eclipse.org/downloads/">Eclipse</a> The Automotive Open Source
-							 Summit 2023 is a gathering of senior architects, innovators, and executives from 
-							 around the world. Attendees will come together to discuss the latest trends 
-							 ,in automotive-grade open source software, to network with like-minded individuals,
-							 and to learn about the technologies and challenges in automotive software 
-							 development...<hr>
-							 <div class="album py-5 bg-light">
-								<div class="container">					
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="perfil" role="tabpanel"
+							aria-labelledby="list-perfil-list">
+							<div class="album py-1 bg-light">
+								<div class="container">
 									<div class="row">
-										 <div class="col-md-4">
+										<div class="col-md-4">
 											<div class="card mb-4 box-shadow">
-												<img class="card-img-top" th:src="@{/image/eclipse.png}">
+												<img class="card-img-top"
+													th:src="@{/image/perfil/eu_perf.png}">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top" th:src="@{/image/perfil/eu3_perf.png}">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/perfil/eu2_perf.png}">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+								<h4>Contato:</h4>
+							<ul>
+								<li><h5>(19) 99466-5247____________________________ <img
+									class="" th:src="@{/image/perfil/whatsapp_ico.png}"></h5>
+								</li>
+								<li><h5>julianonlinet@gmail.com___________________ <img
+									class="" th:src="@{/image/perfil/email_ico.png}"></h5>
+								</li>
+								<li><h5>Sumare-SP__________________________________ <img
+									class="" th:src="@{/image/perfil/local_ico.png}"></h5>
+								</li>
+								<li><h5><a href="https://www.linkedin.com/in/juliano-programador-ti-java/">
+										Linkdin</a>______________________________________ <img class=""
+									th:src="@{/image/perfil/linkdin_ico.png}"></h5>
+								</li>
+							</ul>
+							<hr>
+						</div>
+						<div class="tab-pane fade" id="faculdade" role="tabpanel"
+							aria-labelledby="list-faculdade-list">
+							<a href="https://www.anhanguera.com/">Univercidade
+								Anhanguera:</a> <br> Onde foi concluido o curso de Análise e
+							Desenvolvimento de Sistema.
+							<ul>
+								<li>Curso na
+									Anhanguera______________________________________ <img class=""
+									th:src="@{/image/fac/Anhanguera_ico.png}">
+								</li>
+								<li>Curso Análise de
+									Computação_____________________________ <img class="bi bi-linkedin"
+									th:src="@{/image/fac/pc_ico.png}">
+								</li>
+								<li>Curso na área da
+									Sistema__________________________________ <img class=""
+									th:src="@{/image/fac/sistema_ico.png}">
+								</li>
+							</ul>
+							<hr>
+							
+							<div class="album py-5 bg-light">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/fac/Anhanguera_fuc.png}">
+												<div class="card-body">
+													<h5 class="card-title">Univercidade Anhanguera</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top" th:src="@{/image/fac/pc_fac.png}">
+												<div class="card-body">
+													<h5 class="card-title">Análise de Sistema</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/fac/sistema_fac.png}">
+												<div class="card-body">
+													<h5 class="card-title">Análise de Sistema</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr>
+						</div>
+
+						<div class="tab-pane fade" id="eclipse"
+							role="tabpanel" aria-labelledby="list-eclipse-list">
+							<a href="https://www.eclipse.org/downloads/">LINGUAGEM JAVA e 
+							Ambiente de desenvolvimento:</a> 
+							<br>IDE que foi usada na construção do software:
+							<ul>
+								<li>IDE do
+									Eclipse______________________________________________ <img
+									class="" th:src="@{/image/ide/eclipse_ico.png}">
+								</li>
+								<li>IDE do
+									Spring-Boot________________________________________ <img
+									class="" th:src="@{/image/ide/spring_ico.png}">
+								</li>
+								<li>IDE do
+									VS-Code____________________________________________ <img
+									class="" th:src="@{/image/ide/vscode_ico.png}">
+								</li>
+							</ul>
+							<hr>
+							<div class="album py-5 bg-light">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/ide/eclipse_ide.png}">
 												<div class="card-body">
 													<h5 class="card-title">Eclipse</h5>
 												</div>
@@ -77,91 +187,252 @@
 										</div>
 										<div class="col-md-4">
 											<div class="card mb-4 box-shadow">
-												<img class="card-img-top" th:src="@{/image/java.png}">
+												<img class="card-img-top"
+													th:src="@{/image/ide/spring_ide.png}">
 												<div class="card-body">
-													<h5 class="card-title">Java</h5>
+													<h5 class="card-title">Spring-Boot</h5>
 												</div>
 											</div>
 										</div>
 										<div class="col-md-4">
 											<div class="card mb-4 box-shadow">
-												<img class="card-img-top" th:src="@{/image/spring.png}">
+												<img class="card-img-top"
+													th:src="@{/image/ide/vscode_ide.png}">
 												<div class="card-body">
-													<h5 class="card-title">Spring Boot</h5>
+													<h5 class="card-title">VS-Code</h5>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							 </div>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="spring-boot"
-							role="tabpanel" aria-labelledby="list-spring-boot-list">
-							<a href="https://projects.spring.io/spring-boot/">Spring Boot</a>
-							makes it easy to create stand-alone, production-grade Spring
-							based Applications that you can "just run". We take an
-							opinionated view of the Spring platform and third-party libraries
-							so you can get started with minimum fuss. Most Spring Boot
-							applications need very little Spring configuration.<hr>
+
+						<div class="tab-pane fade" id="spring-boot" role="tabpanel"
+							aria-labelledby="list-spring-boot-list">
+							<a href="https://projects.spring.io/spring-boot/">Spring Boot
+								Framework:</a> <br>Framework para construção do software:
+							<ul>
+								<li>Tecnologia do
+									Spring-boot________________________________ <img class=""
+									th:src="@{/image/toos/spring_ico.png}">
+								</li>
+								<li>Tecnologia do
+									Hibernate__________________________________ <img class=""
+									th:src="@{/image/toos/hibernate_ico.png}">
+								</li>
+								<li>Tecnologia do
+									Thymeleaf__________________________________ <img class=""
+									th:src="@{/image/toos/thymeleaf_ico.png}">
+								</li>
+							</ul>
+							<hr>
+							<div class="album py-5 bg-light">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/toos/spring_tec.png}">
+												<div class="card-body">
+													<h5 class="card-title">Spring-Boot</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/toos/hibernate_tec.png}">
+												<div class="card-body">
+													<h5 class="card-title">Hibernate</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/toos/thymeleaf_tec.png}">
+												<div class="card-body">
+													<h5 class="card-title">Thymeleaf</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="sts" role="tabpanel"
-							aria-labelledby="list-sts-list">
-							The <a href="https://spring.io/tools">Spring Tool Suite</a> is an
-							Eclipse-based development environment that is customized for
-							developing Spring applications. It provides a ready-to-use
-							environment to implement, debug, run, and deploy your Spring
-							applications, including integrations for Pivotal tc Server,
-							Pivotal Cloud Foundry, Git, Maven, AspectJ, and more.<hr>
+
+						<div class="tab-pane fade" id="mysql" role="tabpanel"
+							aria-labelledby="list-mysql-list">
+							<a href="https://www.mysql.com/">MySQL:</a><br> Onde foi
+							criado o banco de dados.
+							<ul>
+								<li>Tecnologia do
+									MySQL______________________________________ <img class=""
+									th:src="@{/image/MySQL/mysql_ico.png}">
+								</li>
+								<li>Tecnologia do
+									UML________________________________________ <img class=""
+									th:src="@{/image/MySQL/uml_ico.png}">
+								</li>
+								<li>Tecnologia do
+									JPA_________________________________________ <img class=""
+									th:src="@{/image/MySQL/jpa_ico.png}">
+								</li>
+							</ul>
+							<hr>
+							<div class="album py-5 bg-light">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/MySQL/mysql_sql.png}">
+												<div class="card-body">
+													<h5 class="card-title">MySQL</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/MySQL/db_sql.png}">
+												<div class="card-body">
+													<h5 class="card-title">Banco de Dados</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/MySQL/jpa_sql.png}">
+												<div class="card-body">
+													<h5 class="card-title">JPA</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="thymeleaf" role="tabpanel"
-							aria-labelledby="list-thymeleaf-list">
-							<a href="http://www.thymeleaf.org/">Thymeleaf</a> is a modern
-							server-side Java template engine for both web and standalone
-							environments. With modules for Spring Framework, a host of
-							integrations with your favourite tools, and the ability to plug
-							in your own functionality, Thymeleaf is ideal for modern-day
-							HTML5 JVM web development — although there is much more it can
-							do.<hr>
+
+						<div class="tab-pane fade" id="web" role="tabpanel"
+							aria-labelledby="list-web-list">
+							O <a href="https://getbootstrap.com/">Bootstrap:</a> O MVC é um
+							padrão de arquitetura de software. O MVC sugere uma maneira para
+							você pensar na divisão de responsabilidades, principalmente
+							dentro de um software web.
+							<ul>
+								<li>Tecnologia web do
+									BootStrap______________________________ <img class=""
+									th:src="@{/image/web/bootstrap_ico.png}">
+								</li>
+								<li>Tecnologia web do HTML, JavaScript,
+									CSS_________________ <img class=""
+									th:src="@{/image/web/mvc_ico.png}">
+								</li>
+								<li>Tecnologia web do
+									Thymeleaf_____________________________ <img class=""
+									th:src="@{/image/web/thymeleaf_ico.png}">
+								</li>
+							</ul>
+							<hr>
+							<div class="album py-5 bg-light">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/web/bootstrap_web.png}">
+												<div class="card-body">
+													<h5 class="card-title">Bootstrap</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top" th:src="@{/image/web/mvc_web.png}">
+												<div class="card-body">
+													<h5 class="card-title">HTML, JS, CSS</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/web/thymeleaf_web.png}">
+												<div class="card-body">
+													<h5 class="card-title">Thymeleaf</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="webjars" role="tabpanel"
-							aria-labelledby="list-webjars-list">
-							<a href="https://www.webjars.org/">WebJars</a> are client-side
-							web libraries (e.g. jQuery ; Bootstrap) packaged into JAR (Java
-							Archive) files.<hr>
+
+						<div class="tab-pane fade" id="github" role="tabpanel"
+							aria-labelledby="list-github-list">
+							<a href="https://github.com/">GitHub:</a> Este progeto se
+							encontra no github, acesse a platafor e fique por dentro do
+							script. Saiba mas sobre o progeto.
+							<ul>
+								<li>Progeto no
+									GitHub_________________________________________ <img class=""
+									th:src="@{/image/github/github_ico.png}">
+								</li>
+								<li>IDE do
+									Eclipse______________________________________________ <img
+									class="" th:src="@{/image/ide/eclipse_ico.png}">
+								</li>
+								<li>IDE do
+									VS-Code____________________________________________ <img
+									class="" th:src="@{/image/ide/vscode_ico.png}">
+								</li>
+							</ul>
+							<hr>
+							<div class="album py-5 bg-light">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/github/github_git.png}">
+												<div class="card-body">
+													<h5 class="card-title">GitHub</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/github/gitide_git.png}">
+												<div class="card-body">
+													<h5 class="card-title">Codigo Fonte</h5>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mb-4 box-shadow">
+												<img class="card-img-top"
+													th:src="@{/image/github/gitide2_git.png}">
+												<div class="card-body">
+													<h5 class="card-title">Codigo Fonte</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="hibernate" role="tabpanel"
-							aria-labelledby="list-hibernate-list">
-							<a href="http://hibernate.org/orm/">Hibernate ORM</a> enables
-							developers to more easily write applications whose data outlives
-							the application process. As an Object/Relational Mapping (ORM)
-							framework, Hibernate is concerned with data persistence as it
-							applies to relational databases (via JDBC). <br />In addition to
-							its own "native" API, Hibernate is also an implementation of the
-							Java Persistence API (JPA) specification. As such, it can be
-							easily used in any environment supporting JPA including Java SE
-							applications, Java EE application servers, Enterprise OSGi
-							containers, etc.<hr>
-						</div>
-						<div class="tab-pane fade" id="bootstrap" role="tabpanel"
-							aria-labelledby="list-bootstrap-list">
-							<a href="https://getbootstrap.com/">Bootstrap</a> is an open
-							source toolkit for developing with HTML, CSS, and JS. Quickly
-							prototype your ideas or build your entire app with our Sass
-							variables and mixins,<a href="https://icons.getbootstrap.com">ICONES</a> responsive grid system, extensive prebuilt
-							components, and powerful plugins built on jQuery.<hr>
-						</div>	
-						<div class="tab-pane fade" id="diffchecker" role="tabpanel"
-							aria-labelledby="list-diffchecker-list">
-							<a href="https://www.diffchecker.com/">Diffchecker</a> Compare text
-							Diffchecker will compare text to find the difference between two text files.
-							Just paste your files and click Find Difference.<hr>
-						</div>	
-											
+						
+
+
 					</div>
 				</div>
 			</div>
 		</div>
-		
-	</section>		
+
+	</section>
 </body>
 </html>
