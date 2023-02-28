@@ -1,0 +1,6 @@
+	* Comandos do CMD *
+dir
+cd..
+cd/
+cd * diretori do arquivo *
+java -jar * diretori do arquivo *
