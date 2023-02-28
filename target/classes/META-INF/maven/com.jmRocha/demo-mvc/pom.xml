@@ -5,7 +5,7 @@
 
 	<groupId>com.jmRocha</groupId>
 	<artifactId>demo-mvc</artifactId>
-	<version>0.0.1.0.03</version>
+	<version>0.0.1.0.04</version>
 	<packaging>jar</packaging>
 
 	<name>demo-mvc</name>
@@ -89,6 +89,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!--dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency-->
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

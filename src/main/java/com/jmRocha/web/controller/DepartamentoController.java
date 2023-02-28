@@ -1,5 +1,7 @@
 package com.jmRocha.web.controller;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jmRocha.domain.Departamento;
 import com.jmRocha.service.DepartamentoService;
+import com.jmRocha.util.PaginacaoUtil;
 
 @Controller
 @RequestMapping("/departamentos")
@@ -28,8 +32,16 @@ public class DepartamentoController {
 	}
 	
 	@GetMapping("/listar")
-	public String listar(ModelMap model) {
-		model.addAttribute("departamentos", service.buscarTodos());
+	public String listar(ModelMap model, 
+			 @RequestParam("page") Optional<Integer> page, 
+			 @RequestParam("dir") Optional<String> dir){
+		
+		int paginaAtual = page.orElse(1);
+		String ordem = dir.orElse("asc");
+		
+		PaginacaoUtil<Departamento> pageDepartamento = service.buscarPorPagina(paginaAtual, ordem);
+		
+		model.addAttribute("pageDepartamento", pageDepartamento);
 		return "departamento/lista"; 
 	}
 	
@@ -73,7 +85,8 @@ public class DepartamentoController {
 			model.addAttribute("success", "Departamento excluído com sucesso.");
 		}
 		
-		return listar(model);
+		//return "redirect:/departamentos/listar";
+		return listar(model, Optional.empty(), Optional.empty());
 	}
 	
 	

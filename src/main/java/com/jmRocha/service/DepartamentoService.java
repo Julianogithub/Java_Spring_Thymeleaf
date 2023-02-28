@@ -3,6 +3,7 @@ package com.jmRocha.service;
 import java.util.List;
 
 import com.jmRocha.domain.Departamento;
+import com.jmRocha.util.PaginacaoUtil;
 
 public interface DepartamentoService {
 
@@ -17,4 +18,6 @@ public interface DepartamentoService {
     List<Departamento> buscarTodos();
 
 	boolean departamentoTemCargos(Long id);
+	
+	PaginacaoUtil<Departamento> buscarPorPagina(int pagina, String direcao);
 }
