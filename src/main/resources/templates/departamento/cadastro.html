@@ -34,9 +34,7 @@
 				            <label for="nome">Departamento</label>
 				            <input type="text" class="form-control" id="nome"
 				                   placeholder="Nome Departamento" autofocus="autofocus" th:field="*{nome}"/>
-				                   
 				        </div>
-				        <span th:errors="*{nome}"></span>
 				    </div>
 				    <input type="hidden" id="id" th:field="*{id}"/>
 				    <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
